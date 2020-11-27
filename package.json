@@ -1,0 +1,21 @@
+{
+  "name": "UtilBot",
+  "version": "0.0.1",
+  "description": "Utility bot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:MrMokka/UtilBot.git"
+  },
+  "keywords": [],
+  "author": "MrMokka",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.0",
+    "nodemon": "^2.0.6"
+  }
+}
