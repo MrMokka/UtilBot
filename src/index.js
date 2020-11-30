@@ -33,6 +33,7 @@ client.on('message', message => {
 
     if (!client.commands.has(commandName)) return;
     const command = client.commands.get(commandName);
+    if(!command.completed && message.author.id != ownerId) return message.reply(`This command is not completed yet`);
 
     try {
         command.execute(message, args);

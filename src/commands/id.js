@@ -1,4 +1,5 @@
 module.exports = {
+	completed: true,
     hidden: true,
 	name: 'id',
     description: 'Display the id of someone, or yourself',

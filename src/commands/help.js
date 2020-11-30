@@ -2,6 +2,8 @@
 const usage = 'help <command>';
 
 module.exports = {
+	completed: true,
+	hidden: false,
 	name: 'help',
     description: 'Shows usage and description of any command',
     usage: usage,
@@ -11,7 +13,7 @@ module.exports = {
         const commandName = args[0].toLowerCase();
 		const command = message.client.commands.get(commandName);
 
-		if (!command) return message.channel.send(`There is no command with name \`${commandName}\`.`);
+		if(!command || !command.completed) return message.channel.send(`There is no command with name \`${commandName}\`.`);
         if(!command.usage) return message.channel.send(`No usage described for \`${commandName}\`, please contact a developer to get this fixed.`);
         
         let msg = `Description: \`${command.description}\`.`
