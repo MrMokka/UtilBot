@@ -1,6 +1,6 @@
-  
+
 module.exports = {
-	completed: true,
+	completed: false,
 	hidden: false,
 	name: 'reload',
 	description: 'Reloads a command',

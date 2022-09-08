@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js --config nodemon.json"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.5.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.19"
   }
 }

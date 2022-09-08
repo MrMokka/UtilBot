@@ -8,6 +8,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 client.prefix = prefix;
 client.ownerId = ownerId;
+client.move = false;
 
 const commandFiles = fs.readdirSync("./src/commands").filter(file => file.endsWith('.js'));
 
@@ -35,8 +36,10 @@ client.on('message', message => {
     const command = client.commands.get(commandName);
     if(!command.completed && message.author.id != ownerId) return message.reply(`This command is not completed yet`);
 
+		//console.log(args)
+
     try {
-        command.execute(message, args);
+        command.execute(message, args, client);
     } catch (error) {
         console.error(error);
         message.reply('there was an error trying to execute that command!');
